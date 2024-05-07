@@ -1,0 +1,114 @@
+@import "variaveis.less";
+@import "mapa.less";
+
+@breakpointMobile: ~'(max-width:767px)';
+@breakpointTablet: ~'(min-width:768px) and (max-width: 1023px)';
+
+.marginBottom{
+    margin-bottom: 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: @corDeFundo;
+    color: @corTextos;
+}
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media @breakpointMobile{
+        max-width: 70%;
+    }
+
+    @media @breakpointTablet{
+        max-width: 80%;
+    }
+}
+
+li{
+    list-style: none;
+}
+
+header{
+    padding: 24px;
+    .avatarProfile{
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.profile-bio{
+    text-align: center;
+    &-name{
+        font-family: #fontes[titulo];
+        font-size: 22px;
+        .marginBottom();
+        padding-top: 8px;
+    }
+    &-subtitle{
+        font-family: #fontes[subtitulo];
+        font-size: 18px;
+        .marginBottom();
+    }
+    &-description{
+        font-family: #fontes[paragrafo];
+        font-size: 14px;
+        opacity: .7;
+    }
+    
+}
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+
+
+    img{
+        transition: all ease .3s;
+        &:hover{
+            transform: scale(1.5)
+        }
+    }
+}
+
+.project-list{
+    margin-top: 32px;
+    &-item{
+        a {
+            text-decoration: none;
+            background-color: @corBotoes;
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: @corTextos;
+            border-radius: 30px;
+            font-family: #fontes[paragrafo];
+            font-weight: bold;
+            
+
+            &:hover{
+                color: @corBotoes;
+                background-color: @corDeFundo;
+                border: 1px solid @corBotoes;
+                transition: all ease 1s;
+            }
+        }
+        
+    }
+}

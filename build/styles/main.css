@@ -1,0 +1,95 @@
+.marginBottom {
+  margin-bottom: 8px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #44355B;
+  color: #E7EB90;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width:767px) {
+  .container {
+    max-width: 70%;
+  }
+}
+@media (min-width:768px) and (max-width: 1023px) {
+  .container {
+    max-width: 80%;
+  }
+}
+li {
+  list-style: none;
+}
+header {
+  padding: 24px;
+}
+header .avatarProfile {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.profile-bio {
+  text-align: center;
+}
+.profile-bio-name {
+  font-family: "Dancing Script", cursive;
+  font-size: 22px;
+  margin-bottom: 8px;
+  padding-top: 8px;
+}
+.profile-bio-subtitle {
+  font-family: "Orbitron", sans-serif;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.profile-bio-description {
+  font-family: "helvetica";
+  font-size: 14px;
+  opacity: 0.7;
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+  width: 100%;
+  margin: 0 auto;
+}
+.social-links img {
+  transition: all ease 0.3s;
+}
+.social-links img:hover {
+  transform: scale(1.5);
+}
+.project-list {
+  margin-top: 32px;
+}
+.project-list-item a {
+  text-decoration: none;
+  background-color: #ECA72C;
+  display: block;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #E7EB90;
+  border-radius: 30px;
+  font-family: "helvetica";
+  font-weight: bold;
+}
+.project-list-item a:hover {
+  color: #ECA72C;
+  background-color: #44355B;
+  border: 1px solid #ECA72C;
+  transition: all ease 1s;
+}
